@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+</head>
+<body>
+
+<a href="{% url 'create_post' %}">Создать пост</a>
+
+<h1>Posts: </h1>
+
+<div>
+    {% for post in posts %}
+    <p>
+        {{ post.title }}
+        {{ post.author }}
+        {{ post.likes }}
+    <a href="{% url 'post_detail' post.slug %}">Посмотреть пост</a><br>
+
+    <p>Like: {{ likes }}</p>
+    </p>
+    {% endfor %}
+
+</div>
+
+
+
+</body>
+</html>

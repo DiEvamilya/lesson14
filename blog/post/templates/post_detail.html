@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail</title>
+</head>
+<body>
+<a href="{% url 'create_post' %}">Создать пост</a>
+<a href="{% url 'post_list' %}">Список постов</a>
+<H1>{{ post.title }}</H1>
+<h3>{{ post.author }}</h3>
+
+    <p> {{ post.body }}</p>
+    <p>{{ likes }}</p>
+<button type="submit" name="likes" value="{{ likes }}">LIKE</button>
+
+</body>
+</html>
